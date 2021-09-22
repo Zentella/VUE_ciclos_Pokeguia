@@ -29,7 +29,7 @@ export default {
   background: white;
 }
 img {
-  width: 50%;
+  width: 50vh;
   margin: -100px 0 -150px 0;
 
 }

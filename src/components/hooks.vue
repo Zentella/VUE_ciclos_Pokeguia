@@ -5,19 +5,19 @@
     <div class="container">
       <div class="tarea">
         Nombre:
-        <input type="text" v-model="texto" placeholder="nombre pokemón" />
+        <input type="text" v-model="texto" placeholder="nombre pokemón" v-on:keyup.enter="Buscar" />
         <button @click="Buscar">Buscar</button>
       </div>
 
       <div class="listaOk" v-if="listaOk">
-        <img v-bind:src="imagen" v-bind:alt="texto" />
+        <img :src="imagen" v-bind:alt="imagen" />
         <h3>Movimientos</h3>
-        <div v-for="item in moves" v-bind:key="item.id">
+        <div v-for="item in moves" :key="item.id">
           <span>{{ item }}</span>
         </div>
 
         <h3>Habilidades</h3>
-        <div v-for="item in abil" v-bind:key="item.id">
+        <div v-for="item in abil" :key="item.id">
           <span>{{ item }}</span>
         </div>
       </div>
